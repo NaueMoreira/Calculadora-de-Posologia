@@ -129,6 +129,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  gap: var(--space-6);
 }
 
 /* ========================================
@@ -726,6 +727,10 @@ footer {
     padding: var(--space-5);
   }
 
+  .selection-box {
+    padding: var(--space-5);
+  }
+
   .radio-option {
     padding: var(--space-2) var(--space-3);
   }
@@ -733,6 +738,121 @@ footer {
   #caixa-calculo {
     padding: var(--space-4);
   }
+
+  .type-calculo {
+    max-width: 100%;
+    padding: var(--space-3) var(--space-6);
+  }
+}
+
+/* ========================================
+   HOME PAGE ESPECÍFICA - SELEÇÃO DE CÁLCULO
+   ======================================== */
+
+.selection-box {
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--bg-card);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInUp var(--transition-slow) ease-out;
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: var(--space-8) 0;
+  align-items: center;
+}
+
+#text p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary);
+  margin-bottom: var(--space-8);
+  text-align: justify;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#text p br {
+  content: '';
+  margin: var(--space-4) 0;
+  display: block;
+}
+
+.type-calculo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--text-on-primary);
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  font-family: inherit;
+  border: none;
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.type-calculo:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-strong);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+}
+
+.type-calculo:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+#calculo-cps, #calculo-liquidos {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.type-calculo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#duvidas {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#duvidas a {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+#duvidas a:hover {
+  border-bottom-color: var(--color-primary);
+  text-decoration: none;
+  color: var(--color-primary-dark);
 }
 
 /* ========================================
